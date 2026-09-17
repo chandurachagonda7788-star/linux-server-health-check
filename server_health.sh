@@ -11,7 +11,17 @@ echo "Uptime        : $(uptime -p)"
 
 echo
 echo "CPU Usage:"
-top -bn1 | grep "Cpu(s)" | awk '{print "CPU Used: " $2 "%"}'
+
+CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}')
+
+echo "CPU Used: $CPU_USAGE%"
+
+if awk "BEGIN {exit !($CPU_USAGE >= 80)}"
+then
+    echo "WARNING: CPU usage is above 80%"
+else
+    echo "CPU Status: NORMAL"
+fi
 
 echo
 echo "Memory Usage:"
