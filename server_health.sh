@@ -25,3 +25,7 @@ echo
 echo "================================="
 echo "Health Check Completed"
 echo "================================="
+
+echo
+echo "Load Average:"
+uptime
