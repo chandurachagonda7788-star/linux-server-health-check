@@ -17,3 +17,5 @@ A simple Bash script to check basic Linux server health.
 ```bash
 chmod +x server_health.sh
 ./server_health.sh
+
+This project is created for Linux server monitoring practice.
