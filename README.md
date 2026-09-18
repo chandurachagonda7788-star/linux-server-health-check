@@ -19,3 +19,6 @@ chmod +x server_health.sh
 ./server_health.sh
 
 This project is created for Linux server monitoring practice.
+
+
+install net-tools
