@@ -39,3 +39,13 @@ echo "================================="
 echo
 echo "Load Average:"
 uptime
+
+echo "Installing net-tools..."
+
+yum install net-tools -y
+
+if rpm -q net-tools >/dev/null 2>&1; then
+    echo "net-tools is installed successfully."
+else
+    echo "net-tools installation failed."
+fi
